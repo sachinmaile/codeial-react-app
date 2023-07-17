@@ -1,4 +1,6 @@
 import styles from '../styles/home.module.css';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faComment,faUser,faHeart } from '@fortawesome/free-regular-svg-icons';
 
 const Home = ({ posts }) => {
   return (
@@ -7,10 +9,7 @@ const Home = ({ posts }) => {
       <div className={styles.postWrapper}>
         <div className={styles.postHeader}>
           <div className={styles.postAvatar}>
-            <img
-              src="https://image.flaticon.com/icons/svg/2154/2154651.svg"
-              alt="user-pic"
-            />
+          <FontAwesomeIcon icon={faUser} />
             <div>
               <span className={styles.postAuthor}>{post.user.name}</span>
               <span className={styles.postTime}>a minute ago</span>
@@ -20,18 +19,12 @@ const Home = ({ posts }) => {
 
           <div className={styles.postActions}>
             <div className={styles.postLike}>
-              <img
-                src="https://image.flaticon.com/icons/svg/1077/1077035.svg"
-                alt="likes-icon"
-              />
+              <FontAwesomeIcon icon={faHeart} />
               <span>5</span>
             </div>
 
             <div className={styles.postCommentsIcon}>
-              <img
-                src="https://image.flaticon.com/icons/svg/1380/1380338.svg"
-                alt="comments-icon"
-              />
+            <FontAwesomeIcon icon={faComment} />
               <span>2</span>
             </div>
           </div>
